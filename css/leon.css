@@ -79,6 +79,7 @@ body {
     .special-heading + p {
         margin-right: -20px;
         margin-top: -30px;
+        max-width: 100%;
     }
 }
 
@@ -400,9 +401,9 @@ body {
     .about .about-content .image::after {
         border-bottom: 45px solid var(--main-color);
         border-left: 50px solid var(--main-color);
-        width: 55px;
+        width: 40px;
         height: calc(100% - 80px);
-        right: -75px;
+        right: -55px;
         top: -20px;
         z-index: -1;
     }
