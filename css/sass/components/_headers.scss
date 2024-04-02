@@ -1,0 +1,25 @@
+@use "../abstracts/index" as *;
+
+.special-heading {
+  color: #ebeced;
+  font: {
+    size: 4.2em;
+    weight: bold;
+  };
+  text-align: center;
+  margin: 0;
+  letter-spacing: -3px;
+  @include breakpoints(medium) {
+    font-size: 6em;
+  }
+  & + p {
+    color: $sub-secondary-color;
+    text-align: center;
+    font-size: 1.1em;
+    margin: -30px -20px -35px 0;
+    max-width: 100%;
+    @include breakpoints(medium) {
+      margin: -35px 0;
+    }
+  }
+}

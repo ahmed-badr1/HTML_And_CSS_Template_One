@@ -1,0 +1,29 @@
+@use "../abstracts/index" as *;
+
+/* Start Portfolio*/
+.portfolio {
+  background-color: $sub-color;
+  padding: $section-padding 0;
+}
+
+.portfolio-content {
+  margin-top: $container-margin-top;
+  gap: calc($element-padding + 10px);
+  .card {
+    background-color: white;
+    img {
+      max-width: 100%;
+    }
+    .info {
+    padding: $element-padding;
+    }
+    h2 {
+    margin: 0;
+    }
+    p {
+      color: $sub-secondary-color;
+      line-height: $main-line-height;
+      margin-bottom: 0;
+    }
+  }
+}

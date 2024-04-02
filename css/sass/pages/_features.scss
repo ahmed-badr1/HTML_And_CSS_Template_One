@@ -1,0 +1,27 @@
+@use "../abstracts/index" as *;
+
+/*Start Features*/
+
+.features {
+  background-color: $sub-color;
+  padding: 30px 0;
+  @include breakpoints(small) {
+    padding: 30px;
+  }
+  .feature {
+    // padding: $element-padding / 2;
+    text-align: center;
+    i {
+      color: $main-color;
+    }
+    h2 {
+      margin: 30px 0;
+      font-weight: 800;
+    }
+    p {
+      line-height: $main-line-height;
+      color: $sub-secondary-color;
+      font-size: 1em;
+    }
+  }
+}

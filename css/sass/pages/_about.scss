@@ -1,0 +1,87 @@
+@use "../abstracts/index" as *;
+
+/* Start About*/
+.about {
+  padding: $section-padding 0;
+}
+
+.about-content {
+  margin-top: calc($container-margin-top + 50px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  @include breakpoints(large) {
+    flex-direction: row;
+    text-align: left;
+  }
+  .image {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 0 auto 60px;
+    @include breakpoints(small) {
+      width: 250px;
+      height: 350px;
+    }
+    @include breakpoints(large) {
+      margin: 0;
+      margin-left: 15px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #ebeced;
+      height: calc(100% + 80px);
+      width: 50px;
+      top: -40px;
+      left: -18px;
+      z-index: -1;
+      @include breakpoints(small) {
+        height: calc(100% + 100px);
+        width: 100px;
+        top: -50px;
+        left: -20px;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      border-bottom: 25px solid #10cab7;
+      border-left: 25px solid #10cab7;
+      width: 40px;
+      height: calc(100% - 20px);
+      top: -20px;
+      right: -25px;
+      z-index: -1;
+      @include breakpoints(small) {
+        border-bottom: 70px solid $main-color;
+        border-left: 80px solid $main-color;
+        width: 180px;
+        top: -30px;
+        right: -140px;
+      }
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  .text {
+    flex-basis: calc(100% - 500px);
+    .p:first-child {
+      font-weight: bold;
+      line-height: calc($main-line-height + 0.2);
+      margin-bottom: 50px;
+    }
+    hr {
+      display: inline-block;
+      border-color: $main-color;
+      width: 50%;
+    }
+    p:last-child {
+      color: $sub-secondary-color;
+      line-height: calc($main-line-height + 0.2);
+    }
+  }
+}

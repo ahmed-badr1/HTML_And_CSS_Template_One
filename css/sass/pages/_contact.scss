@@ -1,0 +1,37 @@
+@use "../abstracts/index" as *;
+
+/* Start Contact*/
+.contact {
+  background-color: $sub-color;
+  padding: $section-padding 0;
+  .info {
+    margin-top: $container-margin-top;
+    text-align: center;
+    .label {
+      color: $secondary-color;
+      font-size: 1.5em;
+      font-weight: 800;
+      letter-spacing: -2px;
+      margin-bottom: 15px;
+    }
+    .link {
+      display: block;
+      color: var(--main-color);
+      font-size: 1.5em;
+      font-weight: 800;
+    }
+    .social {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 5px;
+      @include breakpoints(small) {
+        gap: 10px;
+      }
+      i {
+        color: $main-color;
+      }
+    }
+  }
+
+}

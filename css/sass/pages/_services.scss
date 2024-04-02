@@ -1,0 +1,60 @@
+@use "../abstracts/index" as *;
+
+/* Start Services*/
+
+.services {
+  padding: $section-padding 0;
+  .services-content {
+    margin-top: $container-margin-top;
+    gap: calc($element-padding + 10px);
+    .column {
+      display: flex;
+      flex-direction: column; 
+      justify-content: space-between;
+      .image {
+        display: none;
+        position: relative;
+        text-align: center;
+        &::before {
+          content: "";
+          position: absolute;
+          background-color: $secondary-color;
+          width: 100px;
+          height: calc(100% + 100px);
+          right: 0;
+          top: -50px;
+          z-index: -1;
+        }
+        @include breakpoints(x-large) {
+          display: block
+        }
+        img {
+          width: 260px;
+        }
+      }
+    }
+  }
+  .service {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 10px;
+    @include breakpoints(medium) {
+      flex-direction: row;
+      text-align: left;
+    }
+    i {
+      color: $main-color;
+      flex: 0 0 60px;
+    }
+    h2 {
+      margin: 0;
+    }
+    p {
+      color: $sub-secondary-color;
+      line-height: $main-line-height;
+      font-weight: 300;
+      min-height: 160px;
+    }
+  }
+}

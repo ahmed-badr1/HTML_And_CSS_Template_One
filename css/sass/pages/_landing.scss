@@ -1,0 +1,30 @@
+@use "../abstracts/index" as *;
+
+/* Start Landing*/
+
+.landing {
+  background-image: url("../images/landing.jpg");
+  background-size: cover;
+  height: calc(100vh - 64px);
+  position: relative;
+  .intro-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+    h1 {
+      margin: 0;
+      color: $main-color;
+      font-size: 3em;
+    }
+    p {
+      font-size: 1.3em;
+      line-height: $main-line-height;
+    }
+  }
+}

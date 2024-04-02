@@ -1,0 +1,14 @@
+@use "../abstracts/index" as *;
+
+/* Start Footer*/
+.footer {
+  background-color: $secondary-color;
+  color: white;
+  padding: 30px 10px;
+  font-size: 1.3em;
+  text-align: center;
+  span {
+    font-weight: bold;
+    color: $main-color;
+  }
+}
